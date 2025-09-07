@@ -1,0 +1,60 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# VSCode settings folder
+.vscode/
+
+# JetBrains IDEs folders
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Build output folders (common)
+dist/
+build/
+out/
+
+# Python cache (if applicable)
+__pycache__/
+*.py[cod]
+
+# Environment files (optional)
+.env
+.env.local
+.env.*.local
+
+# macOS Finder metadata
+*.DS_Store
+
+# npm debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# JetBrains specific files
+*.iws
+*.ipr
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# ------------
+# Don't accidentally commit the data set
+*.csv

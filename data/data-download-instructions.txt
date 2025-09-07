@@ -1,0 +1,5 @@
+1. Find the data set here: https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/
+2. Click "download"
+3. Unzip the downloaded folder
+4. Find the file named 'Wednesday-workingHours.pcap_ISCX.csv'
+5. You're done!

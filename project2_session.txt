@@ -1,0 +1,468 @@
+Script started on 2025-09-23 21:02:31-04:00
+
+bash-4.4$ cd data
+
+bash-4.4$ vim README.md
+
+bash-4.4$ cat README.md
+
+# Data Card: Wednesday-workingHours.pcap_ISCX.csv
+
+
+
+**Source & Link**: https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/
+
+**File Format**: CSV
+
+**Compression**: None
+
+**Approx Size**: 215 MB
+
+**Row Count**: 692,704
+
+**Column Count**: 79
+
+**Delimiter**: `,`
+
+**Header**: Yes
+
+**Encoding**: UTF-8
+
+
+
+**Quality Notes**:
+
+- No missing fields or obvious anomalies observed
+
+bash-4.4$ mkdir -p samples
+
+bash-4.4$ head -n 1 ../Wednesday-workingHours.pcap_ISCX.csv > samples/sample1k.csv
+
+bash-4.4$ tail -n +2 ../Wednesday-workingHours.pcap_ISCX.csv | shuf -n 1000 >> samples/sample1k.csv
+
+bash-4.4$ ls -lh data/samples/
+
+ls: cannot access 'data/samples/': No such file or directory
+
+bash-4.4$ ls -lh data/samples
+
+ls: cannot access 'data/samples': No such file or directory
+
+bash-4.4$ ls
+
+README.md  data-download-instructions.txt  samples
+
+bash-4.4$ cat samples
+
+cat: samples: Is a directory
+
+bash-4.4$ cd samples
+
+bash-4.4$ ls
+
+sample1k.csv
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  data-download-instructions.txt  samples
+
+bash-4.4$ cat README.md
+
+# Data Card: Wednesday-workingHours.pcap_ISCX.csv
+
+
+
+**Source & Link**: https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/
+
+**File Format**: CSV
+
+**Compression**: None
+
+**Approx Size**: 215 MB
+
+**Row Count**: 692,704
+
+**Column Count**: 79
+
+**Delimiter**: `,`
+
+**Header**: Yes
+
+**Encoding**: UTF-8
+
+
+
+**Quality Notes**:
+
+- No missing fields or obvious anomalies observed
+
+bash-4.4$ cd README.md
+
+bash: cd: README.md: Not a directory
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt
+
+bash-4.4$ cd data
+
+bash-4.4$ ls
+
+README.md  data-download-instructions.txt  samples
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt
+
+bash-4.4$ ls -lh data/samples/
+
+total 316K
+
+-rw-r--r-- 1 victort jelenag 315K Sep 23 21:04 sample1k.csv
+
+bash-4.4$ wc -l data/samples/sample1k.csv
+
+1001 data/samples/sample1k.csv
+
+bash-4.4$ head -n 5 data/samples/sample1k.csv
+
+ Destination Port, Flow Duration, Total Fwd Packets, Total Backward Packets,Total Length of Fwd Packets, Total Length of Bwd Packets, Fwd Packet Length Max, Fwd Packet Length Min, Fwd Packet Length Mean, Fwd Packet Length Std,Bwd Packet Length Max, Bwd Packet Length Min, Bwd Packet Length Mean, Bwd Packet Length Std,Flow Bytes/s, Flow Packets/s, Flow IAT Mean, Flow IAT Std, Flow IAT Max, Flow IAT Min,Fwd IAT Total, Fwd IAT Mean, Fwd IAT Std, Fwd IAT Max, Fwd IAT Min,Bwd IAT Total, Bwd IAT Mean, Bwd IAT Std, Bwd IAT Max, Bwd IAT Min,Fwd PSH Flags, Bwd PSH Flags, Fwd URG Flags, Bwd URG Flags, Fwd Header Length, Bwd Header Length,Fwd Packets/s, Bwd Packets/s, Min Packet Length, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance,FIN Flag Count, SYN Flag Count, RST Flag Count, PSH Flag Count, ACK Flag Count, URG Flag Count, CWE Flag Count, ECE Flag Count, Down/Up Ratio, Average Packet Size, Avg Fwd Segment Size, Avg Bwd Segment Size, Fwd Header Length,Fwd Avg Bytes/Bulk, Fwd Avg Packets/Bulk, Fwd Avg Bulk Rate, Bwd Avg Bytes/Bulk, Bwd Avg Packets/Bulk,Bwd Avg Bulk Rate,Subflow Fwd Packets, Subflow Fwd Bytes, Subflow Bwd Packets, Subflow Bwd Bytes,Init_Win_bytes_forward, Init_Win_bytes_backward, act_data_pkt_fwd, min_seg_size_forward,Active Mean, Active Std, Active Max, Active Min,Idle Mean, Idle Std, Idle Max, Idle Min, Label
+
+53,218,2,2,108,330,54,54,54,0,165,165,165,0,2009174.312,18348.62385,72.66666667,85.44198812,168,3,3,3,0,3,3,47,47,0,47,47,0,0,0,0,64,64,9174.311927,9174.311927,54,165,98.4,60.79720388,3696.3,0,0,0,0,0,0,0,0,1,123,54,165,64,0,0,0,0,0,0,2,108,2,330,-1,-1,1,32,0,0,0,0,0,0,0,0,BENIGN
+
+80,113134693,5,6,377,11595,371,0,75.4,165.2658464,7240,0,1932.5,2695.639126,105.8207671,0.097229238,11300000,30500000,97000000,48,113000000,28300000,46500000,97000000,48,59617,11923.4,19080.49531,44031,71,0,0,0,0,164,200,0.044195108,0.05303413,0,7240,998.1666667,2065.327658,4265578.333,1,0,0,0,0,0,0,0,1,1088.909091,75.4,1932.5,164,0,0,0,0,0,0,5,377,6,11595,0,235,1,20,0,0,0,0,56500000,57300000,97000000,16000000,DoS Hulk
+
+53,30772,1,1,54,110,54,54,54,0,110,110,110,0,5329.520343,64.99415053,30772,0,30772,30772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,20,32.49707526,32.49707526,54,110,72.66666667,32.33161507,1045.333333,0,0,0,0,0,0,0,0,1,109,54,110,20,0,0,0,0,0,0,1,54,1,110,-1,-1,0,20,0,0,0,0,0,0,0,0,BENIGN
+
+53,56467,2,2,74,154,37,37,37,0,77,77,77,0,4037.756566,70.83783449,18822.33333,32596.0415,56461,3,3,3,0,3,3,3,3,0,3,3,0,0,0,0,64,64,35.41891724,35.41891724,37,77,53,21.9089023,480,0,0,0,0,0,0,0,0,1,66.25,37,77,64,0,0,0,0,0,0,2,74,2,154,-1,-1,1,32,0,0,0,0,0,0,0,0,BENIGN
+
+bash-4.4$ tail -n 5 data/samples/sample1k.csv
+
+53,25132,2,2,62,276,31,31,31,0,138,138,138,0,13448.98934,159.1596371,8377.333333,14466.6856,25082,1,1,1,0,1,1,49,49,0,49,49,0,0,0,0,40,80,79.57981856,79.57981856,31,138,73.8,58.60631365,3434.7,0,0,0,0,0,0,0,0,1,92.25,31,138,40,0,0,0,0,0,0,2,62,2,276,-1,-1,1,20,0,0,0,0,0,0,0,0,BENIGN
+
+51912,194,2,0,12,0,6,6,6,0,0,0,0,0,61855.6701,10309.27835,194,0,194,194,194,194,0,194,194,0,0,0,0,0,0,0,0,0,40,0,10309.27835,0,6,6,6,0,0,0,0,0,0,1,0,0,0,0,9,6,0,40,0,0,0,0,0,0,2,12,0,0,360,-1,1,20,0,0,0,0,0,0,0,0,BENIGN
+
+443,65357153,14,16,766,6599,348,0,54.71428571,107.1493771,1565,0,412.4375,648.6924252,112.6885071,0.459016322,2253694.931,4105548.33,10000000,3,61000000,4691467,5217217.945,10100000,99,65200000,4349416.267,4995737.273,10100000,3,0,0,0,0,292,404,0.214207617,0.244808705,0,1565,237.5806452,499.1688274,249169.5183,0,0,0,1,0,0,0,0,1,245.5,54.71428571,412.4375,292,0,0,0,0,0,0,14,766,16,6599,8192,245,13,20,156119.6667,98368.2886,356913,115812,10000000,6141.258658,10000000,10000000,BENIGN
+
+80,111852471,6,6,744,11595,369,0,124,189.7904107,5792,0,1932.5,2181.008184,110.3149523,0.107284174,10200000,28700000,95500000,46,112000000,22300000,41500000,95500000,966,347437,69487.4,99630.59176,215954,46,0,0,0,0,196,200,0.053642087,0.053642087,0,5792,949.6153846,1701.487415,2895059.423,1,0,0,0,0,0,0,0,1,1028.75,124,1932.5,196,0,0,0,0,0,0,6,744,6,11595,0,235,2,20,0,0,0,0,55800000,56200000,95500000,16000000,DoS Hulk
+
+53,24784,2,2,68,198,34,34,34,0,99,99,99,0,10732.73079,161.394448,8261.333333,14307.31702,24782,1,1,1,0,1,1,1,1,0,1,1,0,0,0,0,40,80,80.69722402,80.69722402,34,99,60,35.60196624,1267.5,0,0,0,0,0,0,0,0,1,75,34,99,40,0,0,0,0,0,0,2,68,2,198,-1,-1,1,20,0,0,0,0,0,0,0,0,BENIGN
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt
+
+bash-4.4$ pwd
+
+/mnt/scratch/CS131_jelenag/projects/team09_sec3
+
+bash-4.4$ ls scripts/
+
+ls: cannot access 'scripts/': No such file or directory
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt
+
+bash-4.4$ cd data
+
+bash-4.4$ ls
+
+README.md  data-download-instructions.txt  samples
+
+bash-4.4$ cat samples
+
+cat: samples: Is a directory
+
+bash-4.4$ cd samples
+
+bash-4.4$ ls
+
+sample1k.csv
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  data-download-instructions.txt  samples
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt
+
+bash-4.4$ mkdir -p scripts
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt  scripts
+
+bash-4.4$ vim scripts/run_project2.sh
+
+bash-4.4$ chmod +x scripts/run_project2.sh
+
+bash-4.4$ ./scripts/run_project2.sh
+
+Generating 1k sample...
+
+Sample created at data/samples/sample1k.csv
+
+bash-4.4$ ls -lh data/samples/
+
+total 324K
+
+-rw-r--r-- 1 victort jelenag 322K Sep 23 21:13 sample1k.csv
+
+bash-4.4$ wc -l data/samples/sample1k.csv
+
+1001 data/samples/sample1k.csv
+
+bash-4.4$ head -n 5 data/samples/sample1k.csv
+
+ Destination Port, Flow Duration, Total Fwd Packets, Total Backward Packets,Total Length of Fwd Packets, Total Length of Bwd Packets, Fwd Packet Length Max, Fwd Packet Length Min, Fwd Packet Length Mean, Fwd Packet Length Std,Bwd Packet Length Max, Bwd Packet Length Min, Bwd Packet Length Mean, Bwd Packet Length Std,Flow Bytes/s, Flow Packets/s, Flow IAT Mean, Flow IAT Std, Flow IAT Max, Flow IAT Min,Fwd IAT Total, Fwd IAT Mean, Fwd IAT Std, Fwd IAT Max, Fwd IAT Min,Bwd IAT Total, Bwd IAT Mean, Bwd IAT Std, Bwd IAT Max, Bwd IAT Min,Fwd PSH Flags, Bwd PSH Flags, Fwd URG Flags, Bwd URG Flags, Fwd Header Length, Bwd Header Length,Fwd Packets/s, Bwd Packets/s, Min Packet Length, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance,FIN Flag Count, SYN Flag Count, RST Flag Count, PSH Flag Count, ACK Flag Count, URG Flag Count, CWE Flag Count, ECE Flag Count, Down/Up Ratio, Average Packet Size, Avg Fwd Segment Size, Avg Bwd Segment Size, Fwd Header Length,Fwd Avg Bytes/Bulk, Fwd Avg Packets/Bulk, Fwd Avg Bulk Rate, Bwd Avg Bytes/Bulk, Bwd Avg Packets/Bulk,Bwd Avg Bulk Rate,Subflow Fwd Packets, Subflow Fwd Bytes, Subflow Bwd Packets, Subflow Bwd Bytes,Init_Win_bytes_forward, Init_Win_bytes_backward, act_data_pkt_fwd, min_seg_size_forward,Active Mean, Active Std, Active Max, Active Min,Idle Mean, Idle Std, Idle Max, Idle Min, Label
+
+80,153721,3,5,304,11595,304,0,101.3333333,175.5144818,8688,0,2319,3774.237539,77406.47016,52.04233644,21960.14286,51554.88837,138195,5,15030,7515,10620.74385,15025,5,153703,38425.75,66880.27186,138195,162,0,0,0,0,104,168,19.51587617,32.52646028,0,8688,1322.111111,2920.378762,8528612.111,0,0,0,1,0,0,0,0,1,1487.375,101.3333333,2319,104,0,0,0,0,0,0,3,304,5,11595,29200,235,1,32,0,0,0,0,0,0,0,0,DoS Hulk
+
+80,990,2,0,0,0,0,0,0,0,0,0,0,0,0,2020.20202,990,0,990,990,990,990,0,990,990,0,0,0,0,0,0,0,0,0,64,0,2020.20202,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,64,0,0,0,0,0,0,2,0,0,0,251,-1,0,32,0,0,0,0,0,0,0,0,DoS Hulk
+
+53,187,2,2,76,282,38,38,38,0,141,141,141,0,1914438.503,21390.37433,62.33333333,101.9035492,180,3,3,3,0,3,3,4,4,0,4,4,0,0,0,0,40,40,10695.18717,10695.18717,38,141,79.2,56.41542342,3182.7,0,0,0,0,0,0,0,0,1,99,38,141,40,0,0,0,0,0,0,2,76,2,282,-1,-1,1,20,0,0,0,0,0,0,0,0,BENIGN
+
+49424,87,1,1,0,0,0,0,0,0,0,0,0,0,0,22988.50575,87,0,87,87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,32,11494.25287,11494.25287,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,32,0,0,0,0,0,0,1,0,1,0,905,229,0,32,0,0,0,0,0,0,0,0,BENIGN
+
+bash-4.4$ cat scripts
+
+cat: scripts: Is a directory
+
+bash-4.4$ cd scripts
+
+bash-4.4$ ls
+
+run_project2.sh
+
+bash-4.4$ cat scripts/run_project2.sh
+
+cat: scripts/run_project2.sh: No such file or directory
+
+bash-4.4$ pwd
+
+/mnt/scratch/CS131_jelenag/projects/team09_sec3/scripts
+
+bash-4.4$ cat run_project2.sh
+
+#!/bin/bash
+
+# run_project2.sh
+
+# Usage: ./scripts/run_project2.sh
+
+# Generates 1k sample from Wednesday-workingHours.pcap_ISCX.csv
+
+
+
+set -e  # stop on error
+
+
+
+echo "Generating 1k sample..."
+
+mkdir -p data/samples
+
+head -n 1 Wednesday-workingHours.pcap_ISCX.csv > data/samples/sample1k.csv
+
+tail -n +2 Wednesday-workingHours.pcap_ISCX.csv | shuf -n 1000 >> data/samples/sample1k.csv
+
+echo "Sample created at data/samples/sample1k.csv"
+
+bash-4.4$ pwd
+
+/mnt/scratch/CS131_jelenag/projects/team09_sec3/scripts
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt  scripts
+
+bash-4.4$ cd data
+
+bash-4.4$ ls
+
+README.md  data-download-instructions.txt  samples
+
+bash-4.4$ cd samples
+
+bash-4.4$ ls
+
+sample1k.csv
+
+bash-4.4$ cd ..
+
+bash-4.4$ cd ..
+
+bash-4.4$ ls
+
+README.md  Wednesday-workingHours.pcap_ISCX.csv  data  project2_session.txt  scripts
+
+bash-4.4$ vim -R scripts/run_project2.sh
+
+bash-4.4$ exit
+
+exit
+
+
+
+Script done on 2025-09-23 21:19:07-04:00
+
+
+Script started on 2025-09-24 02:36:26-04:00
+bash-4.4$ nan[K[K[Knano project2_session.txt
+[?1049h[22;0;0t[1;48r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[46;85H(B[0;7m[ Reading File ](B[m[46;70H(B[0;1m[37m[41m[ File 'project2_session.txt' is unwritable ][39;49m(B[m[H(B[0;7m  GNU nano 2.9.8                                                                     project2_session.txt                                                                               [1;183H(B[m[47d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify	(B[0;7m^C(B[m Cur Pos	(B[0;7mM-U(B[m Undo[47;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket  (B[0;7mM-▲(B[m Previous    (B[0;7m^B(B[m Back[48d(B[0;7m^X(B[m Exit[48;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace	(B[0;7m^U(B[m Uncut Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[48;113H(B[0;7mM-6(B[m Copy Text   (B[0;7mM-W(B[m WhereIs Next(B[0;7mM-▼(B[m Next[48;161H(B[0;7m^F(B[m Forward[46d[3d[39;49m(B[mScript started on 2025-09-23 21:02:31-04:00[4dbash-4.4$ cd data[5dbash-4.4$ vim README.md[6d^[[?2004h^[[?1049h^[[22;0;0t^[[?1h^[=^[[?2004h^[[1;41r^[[?12h^[[?12l^[[27m^[[23m^[[29m^[[m^[[H^[[2J^[[?25l^[[41;1H"README.md" 14L, 394C^[[2;1H▽^[[6n^[[2;1H  ^[[1;1H^[[>c^[]10;?^G^[]11$[8;1H^[[1m**Source & Link**^[[m: https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/[9d^[[1m**File Format**^[[m: CSV[10d^[[1m**Compression**^[[m: None[11d^[[1m**Approx Size**^[[m: 215 MB[12d^[[1m**Row Count**^[[m: 692,704[13d^[[1m**Column Count**^[[m: 79[14d^[[1m**Delimiter**^[[m: ^[[35m`^[[m,^[[35m`^[[m[15d^[[1m**Header**^[[m: Yes[16d^[[1m**Encoding**^[[m: UTF-8[18d^[[1m**Quality Notes**^[[m:[19d^[[38;5;130m-^[[m No missing fields or obvious anomalies observed[20d^[[94m~[20;163H^[[16;1H~[184G$[22;1H^[[1m**Source & Link**^[[m: https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/[23d^[[1m**File Format**^[[m: CSV[24d^[[1m**Compression**^[[m: None[25d^[[1m**Approx Size**^[[m: 215 MB[26d^[[1m**Row Count**^[[m: 692,704[27d^[[1m**Column Count**^[[m: 79[28d^[[1m**Delimiter**^[[m: ^[[38;5;224m`^[[m,^[[38;5;224m`^[[m[29d^[[1m**Header**^[[m: Yes[30d^[[1m**Encoding**^[[m: UTF-8[32d^[[1m**Quality Notes**^[[m:[33d^[[93m-^[[m No missing fields or obvious anomalies observed[34d^[[94m~[34;163H^[[16;1H~[184G$[35;1H^[[?2004l^[[?1l^[>^[[?25h^[[?1049l^[[23;0;0tbash-4.4$ cat README^H^[[K^H^[[K^H^[[KDME>md^H^[[K^H^[[K^H^[[K.md[36d[36m# Data Card: Wednesday-workingHours.pcap_ISCX.csv[38d[39m(B[m**Source & Link**: https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/[39d**File Format**: CSV[40d**Compression**: None[41d**Approx Size**: 215 MB[42d**Row Count**: 692,704[43d**Column Count**: 79[44d**Delimiter**: `,`[45d**Header**: Yes[3d[?12l[?25h[?25l[46d[J[48;184H[?12l[?25h[48;1H[?1049l[23;0;0t[?1l>bash-4.4$ ls
+data  out  project2_session.txt  project2_tanishq_session.txt  README.md  scripts  Wednesday-workingHours.pcap_ISCX.csv
+bash-4.4$ exit
+exit
+
+Script done on 2025-09-24 02:38:42-04:00
+Script started on 2025-09-24 02:40:57-04:00
+bash-4.4$ exit
+exit
+
+Script done on 2025-09-24 02:41:06-04:00
+Script started on 2025-09-24 02:43:12-04:00
+bash-4.4$ FILE=Wede[Knesday-workingH[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/mnt/scratch/CS131_jelenag/projects/team09_sec3/Wes[Kdnesday-workingHours.pcap_ISCX.csv
+bash-4.4$ cd out
+bash-4.4$ ls
+bash-4.4$ STREAM="cat"; [[ "$FILE" == *.gz ]] && STREAM="zcat"
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1 \
+>   | sort | uniq -c | sort -nr \
+>   | tee out/freq_dst_port.txt | head
+tee: out/freq_dst_port.txt: No such file or directory
+ 301422 80
+ 195531 53
+ 100229 443
+   4293 123
+   2169 22
+   1480 137
+   1136 389
+   1112 21
+    932 88
+    691 465
+bash-4.4$ cd ..
+bash-4.4$ ls /out
+ls: cannot access '/out': No such file or directory
+bash-4.4$ ls out
+bash-4.4$ ls -d out
+out
+bash-4.4$ STREAM="cat"; [[ "$FILE" == *.gz ]] && STREAM="zcat"
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1 \
+>   | sort | uniq -c | sort -nr \
+>   | tee out/freq_dst_port.txt | head
+tee: out/freq_dst_port.txt: Permission denied
+ 301422 80
+ 195531 53
+ 100229 443
+   4293 123
+   2169 22
+   1480 137
+   1136 389
+   1112 21
+    932 88
+    691 465
+bash-4.4$ mkdir out
+bash-4.4$ mkdir out$STREAM "$FILE" | tail -n +2 | cut -d',' -f1   | sort | uniq -c | sort -nr   | tee out/freq_dst_port.txt | head[C[C[C[C[C[C[C[C[C[Cmkdir out[K[Kmkdir out$STREAM "$FILE" | tail -n +2 | cut -d',' -f1   | sort | uniq -c | sort -nr   | tee out/freq_dst_port.txt | head[C[C[C[C[C[C[C[C[C[C[59PSTREAM="cat"; [[ "$FILE" == *.gz ]] && STREAM="zcat"[C[C[C[C[C[C[C[C[C[Cls -d out[KSTREAM="cat"; [[ "$FILE" == *.gz ]] && STREAM="zcat"[C[C[C[C[C[C[C[C[C[C$STREAM "$FILE" | tail -n +2 | cut -d',' -f1   | sort | uniq -c | sort -nr   | tee out/freq_dst_port.txt | head[C[C[C[C[C[C[C[C[C[Cmkdir out[K[KSTREAM="cat"; [[ "$FILE" == *.gz ]] && STREAM="zcat"
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1 \
+>   | sort | uniq -c | sort -nr \
+>   | tee out/freq_dst_port.txt | head
+ 301422 80
+ 195531 53
+ 100229 443
+   4293 123
+   2169 22
+   1480 137
+   1136 389
+   1112 21
+    932 88
+    691 465
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f3 \
+>   | sort | uniq -c | sort -nr \
+>   | tee out/freq_total_fwd_pkts.txt | head
+ 260416 2
+ 103209 1
+  51135 7
+  44821 6
+  42193 3
+  36995 8
+  30416 5
+  27422 4
+  26074 9
+  10703 10
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1 \
+>   | sort | uniq -c | sort -nr | head -n 10 \
+>   > out/top_dst_port_10.txt
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1,3 \
+>   | sort -u > out/skinny_dstport_totalfwdpkts.csv
+bash-4.4$ $STREAM "$FILE" | head -n 1 | grep -i 'destination' \
+> out/grep_i_destination_header.txt
+grep: out/grep_i_destination_header.txt: No such file or directory
+bash-4.4$ $STREAM "$FILE" | head -n 1 | grep -i 'destination' \
+>   > out/grep_i_destination_header.txt
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | grep -v '^[[:space:]]*0,' \
+>   | head -n 5 > out/grep_v_dstport0_preview.txt
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1 | sort | uniq -c | sort -nr | head
+ 301422 80
+ 195531 53
+ 100229 443
+   4293 123
+   2169 22
+   1480 137
+   1136 389
+   1112 21
+    932 88
+    691 465
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f3 | sort | uniq -c | sort -nr | head
+ 260416 2
+ 103209 1
+  51135 7
+  44821 6
+  42193 3
+  36995 8
+  30416 5
+  27422 4
+  26074 9
+  10703 10
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f1 | sort | uniq -c | sort -nr | head -n 10
+ 301422 80
+ 195531 53
+ 100229 443
+   4293 123
+   2169 22
+   1480 137
+   1136 389
+   1112 21
+    932 88
+    691 465
+bash-4.4$ $STREAM "$FILE" | tail -n +2 | cut -d',' -f4 \
+>   | sort | uniq -c | sort -nr \
+>   | tee out/freq_total_bwd_pkts.txt | head
+ 156304 2
+ 134691 0
+ 129368 1
+  86250 6
+  52978 7
+  35797 5
+  19341 4
+  12557 8
+   7485 3
+   5132 14
+bash-4.4$ zcat missing.gz > out/missing_stdout.txt 2> out/missing_stderr.txt
+bash-4.4$ echo "run $(date -Is)" >> out/runs.log
+bash-4.4$ exit
+exit
+
+Script done on 2025-09-24 03:00:31-04:00

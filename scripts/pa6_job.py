@@ -18,8 +18,8 @@ df = (spark.read.option("header", True)
       .option("inferSchema", True)
       .option("delimiter", ",")
       .csv(DATASET))
-df = df.toDF(*[c.strip() for c in df.columns])
-print(f"{datetime.datetime.now()} - Loaded {df.count()} rows, {len(df.columns)} columns.")
+df = df.toDF(*[c.strip() for c in df.columns]) # Removing white spacing before and after 
+print(f"{datetime.datetime.now()} - Loaded {df.count()} rows, {len(df.columns)} columns.") # Make sure the loaded # are the same as ur expected in the downloaded DS
 
 # Filter and select important columns
 quality = (df.select(
